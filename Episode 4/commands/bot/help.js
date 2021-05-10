@@ -50,7 +50,7 @@ execute(client, message, args){
                 .setThumbnail(client.user.displayAvatarURL())
                 .setColor('BLUE')
                 .addField('Nama Command', command.name)
-                .addField('Alias', command.aliases.length > 1 ? command.aliases.join(', ') : 'Tidak ada Alias')
+                .addField('Alias', command.aliases.length > 0 ? command.aliases.join(', ') : 'Tidak ada Alias')
                 .addField('Deskripsi', command.description)
                 .addField('Penggunaan', command.usage.length !== 0 ? `${client.prefix}${command.name} ${command.usage}` : `${client.prefix}${command.name}`)
                 .setFooter(message.author.tag, message.author.displayAvatarURL({ dynamic: true }))
