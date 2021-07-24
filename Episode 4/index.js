@@ -40,6 +40,7 @@ client.on("message", async message => {
     if(message.author.bot || message.channel.type == 'dm') return;
 
     const prefix = client.prefix
+    if(message.content.toLowerCase().indexOf(prefix) !== 0);
 
     const args = message.content.slice(prefix.length).trim().split(/ +/g);
     const command = args.shift().toLowerCase()
